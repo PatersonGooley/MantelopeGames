@@ -22,11 +22,15 @@
             color: white;
             padding: 10px 0;
         }
+        main {
+            background-color: #003459;
+        }
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
+            background-color: rgb(194, 249, 187);
         }
         .logo {
             display: flex;
@@ -45,7 +49,7 @@
             margin: 0 15px;
         }
         .nav-links a {
-            color: white;
+            color: black;
             text-decoration: none;
             font-weight: bold;
         }
@@ -53,7 +57,7 @@
             padding: 20px;
         }
         .game {
-            background: white;
+            background: rgb(112, 141, 129);
             padding: 15px;
             margin: 10px auto;
             width: 80%;
@@ -84,6 +88,14 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .text {
+            color: white;
+        }
+        .text-black {
+            color: black;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
     </style>
 </head>
 <body>
@@ -91,42 +103,42 @@
         <nav>
             <div class="logo">
                 <img src="logo.png" alt="Mantelope Games Logo">
-                <span>Mantelope Games</span>
+                <span class="text-black">Mantelope Games</span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Games</a></li>
-                <li><a href="https://github.com/PatersonGooley/MantelopeGames">GitHub Repo</a></li>
+                <li><a href="index.html" class="text">Home</a></li>
+                <li><a href="about.html" class="text">Games</a></li>
+                <li><a href="https://github.com/PatersonGooley/MantelopeGames" class="text">GitHub Repo</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="home">
-            <h1>Welcome to Mantelope Games</h1>
-            <h3>Making games since 2019</h3>
-            <p>Publishing on <a href="https://itch.io">itch.io</a> since 2024</p>
+            <h1 class="text">Welcome to Mantelope Games</h1>
+            <h3 class="text">Making games since 2019</h3>
+            <p class="text">Publishing on <a href="https://itch.io">itch.io</a> since 2024</p>
         </section>
         <section id="latest-games">
-            <h2>Latest Games</h2>
+            <h2 class="text">Latest Games</h2>
             <div class="game">
-                <h3>Slime Starlight</h3>
-                <p>A game about a slime, collecting badly drawn stars.</p>
-                <a href="https://mantelope-games.itch.io/slime-starlight">Get it here</a>
+                <h3 class="text">Slime Starlight</h3>
+                <p class="text">A game about a slime, collecting badly drawn stars.</p>
+                <a href="https://mantelope-games.itch.io/slime-starlight" class="text">Get it here</a>
             </div>
             <div class="game">
-                <h3>Tapper</h3>
-                <p>A game made for TriJam #294 in 3 hours. (Don't expect much.)</p>
-                <a href="https://mantelope-games.itch.io/tapper">Get it here</a>
-                <a href="https://itch.io/jam/trijam-294"> View TriJam #294</a>
+                <h3 class="text">Tapper</h3>
+                <p class="text">A game made for TriJam #294 in 3 hours. (Don't expect much.)</p>
+                <a href="https://mantelope-games.itch.io/tapper" class="text">Get it here</a>
+                <a href="https://itch.io/jam/trijam-294" class="text"> View TriJam #294</a>
             </div>
-            <p id="view-all"><a href="about.html">View All Games</a></p>
+            <p id="view-all"><a href="about.html" class="text">View All Games</a></p>
         </section>
         <section id="upcoming-games">
-            <h2>Upcoming Games</h2>
+            <h2 class="text">Upcoming Games</h2>
             <div class="game">
-                <h3>Portals on The Moon!</h3>
-                <p>Your a cow that landed on the moon and has to use portals to escape.</p>
-                <a href="#">Coming soon</a>
+                <h3 class="text">Portals on The Moon!</h3>
+                <p class="text">Your a cow that landed on the moon and has to use portals to escape.</p>
+                <a href="#" class="text">Coming soon</a>
             </div>
         </section>
     </main>
