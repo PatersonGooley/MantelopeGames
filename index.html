@@ -5,32 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantelope Games Website</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #003459, #001a2e);
             text-align: center;
+            color: white;
         }
         header {
             background-color: #333;
             color: white;
             padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         #footer {
             background-color: #333;
             color: white;
             padding: 10px 0;
         }
-        main {
-            background-color: #003459;
-        }
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
-            background-color: rgb(194, 249, 187);
+            background-color: rgb(194, 249, 136);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .logo {
             display: flex;
@@ -38,7 +40,7 @@
         }
         .logo img {
             height: 90px;
-            margin-right: 45px;
+            margin-right: 15px;
         }
         .nav-links {
             list-style: none;
@@ -53,48 +55,39 @@
             text-decoration: none;
             font-weight: bold;
         }
-        #home, #latest-games, #upcoming-games {
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
         }
         .game {
-            background: rgb(112, 141, 129);
-            padding: 15px;
-            margin: 10px auto;
-            width: 80%;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .game:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+        }
+        .game img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
         .game a {
-            display: block;
+            display: inline-block;
             margin-top: 10px;
-            color: #007BFF;
+            color: #00d4ff;
             text-decoration: none;
             font-weight: bold;
-        }
-        #home a {
-            margin-top: 10px;
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        #footer a {
-            margin-top: 10px;
-            color: #007BFF;
-            text-decoration: none;
-        }
-        #view-all a {
-            margin-top: 10px;
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .text {
-            color: white;
         }
         .text-span {
             color: black;
-            font-weight: bold;
-            font-size: 1.5em;
         }
     </style>
 </head>
@@ -106,39 +99,41 @@
                 <span class="text-span">Mantelope Games</span>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="text">Home</a></li>
-                <li><a href="about.html" class="text">Games</a></li>
-                <li><a href="https://github.com/PatersonGooley/MantelopeGames" class="text">GitHub Repo</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Games</a></li>
+                <li><a href="https://github.com/PatersonGooley/MantelopeGames">GitHub Repo</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home">
-            <h1 class="text">Welcome to Mantelope Games</h1>
-            <h3 class="text">Making games since 2019</h3>
-            <p class="text">Publishing on <a href="https://itch.io">itch.io</a> since 2024</p>
-        </section>
         <section id="latest-games">
-            <h2 class="text">Latest Games</h2>
-            <div class="game">
-                <h3 class="text">Slime Starlight</h3>
-                <p class="text">A game about a slime, collecting badly drawn stars.</p>
-                <a href="https://mantelope-games.itch.io/slime-starlight" class="text">Get it here</a>
+            <h2>Latest Games</h2>
+            <div class="game-container">
+                <div class="game">
+                    <img src="slime-starlight.png" alt="Slime Starlight">
+                    <h3>Slime Starlight</h3>
+                    <p>A game about a slime, collecting badly drawn stars.</p>
+                    <a href="https://mantelope-games.itch.io/slime-starlight">Get it here</a>
+                </div>
+                <div class="game">
+                    <img src="tapper.png" alt="Tapper">
+                    <h3>Tapper</h3>
+                    <p>A game made for TriJam #294 in 3 hours. (Don't expect much.)</p>
+                    <a href="https://mantelope-games.itch.io/tapper">Get it here  |</a>
+                    <a href="https://itch.io/jam/trijam-294">View TriJam #294</a>
+                </div>
             </div>
-            <div class="game">
-                <h3 class="text">Tapper</h3>
-                <p class="text">A game made for TriJam #294 in 3 hours. (Don't expect much.)</p>
-                <a href="https://mantelope-games.itch.io/tapper" class="text">Get it here</a>
-                <a href="https://itch.io/jam/trijam-294" class="text"> View TriJam #294</a>
-            </div>
-            <p id="view-all"><a href="about.html" class="text">View All Games</a></p>
+            <p><a href="about.html">View All Games</a></p>
         </section>
         <section id="upcoming-games">
-            <h2 class="text">Upcoming Games</h2>
-            <div class="game">
-                <h3 class="text">Portals on The Moon!</h3>
-                <p class="text">Your a cow that landed on the moon and has to use portals to escape.</p>
-                <a href="#" class="text">Coming soon</a>
+            <h2>Upcoming Games</h2>
+            <div class="game-container">
+                <div class="game">
+                    <img src="portals-moon.png" alt="Portals on The Moon!">
+                    <h3>Portals on The Moon!</h3>
+                    <p>You're a cow that landed on the moon and has to use portals to escape.</p>
+                    <a href="#">Coming soon</a>
+                </div>
             </div>
         </section>
     </main>
