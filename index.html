@@ -14,6 +14,7 @@
             background: linear-gradient(to bottom, #003459, #001a2e);
             text-align: center;
             color: white;
+            overflow: hidden;
         }
         header {
             background-color: #333;
@@ -36,115 +37,168 @@
         }
         .logo {
             display: flex;
-            align-items: center;
         }
-        .logo img {
-            height: 90px;
-            margin-right: 15px;
+        .trail {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #00d4ff;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s, opacity 0.1s;
         }
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-        }
-        .nav-links li {
-            margin: 0 15px;
-        }
-        .nav-links a {
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .game-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .game {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .game:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-        }
-        .game img {
+        #particles-js {
+            position: absolute;
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-        .game a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #00d4ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .text-span {
-            color: black;
-        }
-        .unpurpleise {
-            color: #00d4ff;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
+    <div id="particles-js"></div>
     <header>
         <nav>
             <div class="logo">
                 <img src="logo.png" alt="Mantelope Games Logo">
-                <span class="text-span">Mantelope Games</span>
+                <span>Mantelope Games</span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="https://github.com/PatersonGooley/MantelopeGames">GitHub Repo</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section id="home">
+            <h1>Welcome to Mantelope Games</h1>
+            <h3>Making games since 2019</h3>
+            <p>Publishing on <a href="https://itch.io">itch.io</a> since 2024</p>
+        </section>
         <section id="latest-games">
             <h2>Latest Games</h2>
-            <div class="game-container">
-                <div class="game">
-                    <img src="Slime_Starlight.png" alt="Slime Starlight">
-                    <h3>Slime Starlight</h3>
-                    <p>A game about a slime, collecting badly drawn stars.</p>
-                    <a href="https://mantelope-games.itch.io/slime-starlight">Get it here</a>
-                </div>
-                <div class="game">
-                    <img src="tapper.png" alt="Tapper">
-                    <h3>Tapper</h3>
-                    <p>A game made for TriJam #294 in 3 hours. (Don't expect much.)</p>
-                    <a href="https://mantelope-games.itch.io/tapper">Get it here  |</a>
-                    <a href="https://itch.io/jam/trijam-294">View TriJam #294</a>
-                </div>
+            <div class="game">
+                <h3>Slime Starlight</h3>
+                <p>A game about a slime, collecting badly drawn stars.</p>
+                <a href="https://mantelope-games.itch.io/slime-starlight">Get it here</a>
             </div>
-            <p><a href="about.html" class="unpurpleise">View All Games</a></p>
-        </section>
-        <section id="upcoming-games">
-            <h2>Upcoming Games</h2>
-            <div class="game-container">
-                <div class="game">
-                    <img src="moon.jpg" alt="Portals on The Moon!">
-                    <h3>Portals on The Moon!</h3>
-                    <p>You're a cow that landed on the moon and has to use portals to escape.</p>
-                    <a href="#">Coming soon</a>
-                </div>
+            <div class="game">
+                <h3>Tapper</h3>
+                <p>A game made for TriJam #294 in 3 hours. (Don't expect much.)</p>
+                <a href="https://mantelope-games.itch.io/tapper">Get it here</a>
             </div>
         </section>
     </main>
-    <footer>
-        <div id="footer">
-            <p>&copy; 2024 Mantelope Games</p>
-            <p>Website by <a href="https://mantelope-games.itch.io" class="unpurpleise">Paterson Gooley</a></p>
-        </div>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#ffffff'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
 </html>
