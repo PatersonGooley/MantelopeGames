@@ -95,6 +95,36 @@
         .bold {
             font-weight: bold;
         }
+        body {
+        cursor: image-url('cursor.png'), auto;
+    }
+
+    body::after {
+        content: '';
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(0, 212, 255, 0.5);
+        pointer-events: none;
+        z-index: 9999;
+        box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease;
+    }
+
+    body:hover::after {
+        animation: glow 1s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+        to {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 1);
+        }
+    }
     </style>
 </head>
 <body>
@@ -150,4 +180,10 @@
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener('mousemove', function(e) {
+        const cursorGlow = document.querySelector('body::after');
+        cursorGlow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+</script>
 </html>
