@@ -103,6 +103,30 @@
             animation: pulse;
             animation-duration: infinite;
         }
+        .button-3 {
+            display: inline-block;
+            padding: 12px 24px;
+            color: #fff;
+            background: linear-gradient(45deg, #0099ff, #00d4ff);
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .button-3:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .button-3:active {
+            transform: scale(0.95);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -128,13 +152,14 @@
                     <img src="Slime_Starlight.png" alt="Slime Starlight">
                     <h3>Slime Starlight</h3>
                     <p>A game about a slime, collecting badly drawn stars.</p>
-                    <a href="https://mantelope-games.itch.io/slime-starlight">Get it here</a>
+                    <a href="https://mantelope-games.itch.io/slime-starlight"><button class="button-3">Get it Here!</button></a>
                 </div>
                 <div class="game animate__animated animate__fadeInDown">
                     <img src="tapper.png" alt="Tapper">
                     <h3>Tapper</h3>
                     <p>A game made for TriJam #294 in 3 hours. (Don't expect much.)</p>
-                    <a href="https://mantelope-games.itch.io/tapper">Get it here  |</a>
+                    <a href="https://mantelope-games.itch.io/tapper"><button class="button-3">Get it Here!</button></a>
+                    <br>
                     <a href="https://itch.io/jam/trijam-294">View TriJam #294</a>
                 </div>
             </div>
