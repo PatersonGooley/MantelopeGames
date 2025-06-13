@@ -90,6 +90,37 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .jobs-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .job {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .job:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+        }
+        .job img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .job a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
         .text-span {
             color: black;
         }
@@ -136,13 +167,14 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="logo3.png" alt="Mantelope Games Logo" class="animate__animated animate__lightSpeedInLeft">
+                <img src="logo.png" alt="Mantelope Games Logo" class="animate__animated animate__lightSpeedInLeft">
                 <span class="text-span">Mantelope Games</span>
             </div>
             <ul class="nav-links">
                 <li class="nav-margin"><a href="#latest-games">Games</a></li>
                 <li class="nav-margin"><a href="#upcoming-games">Upcoming Games</a></li>
-                <li class="animate__animated animate__tada image github-logo"><a href="https://github.com/PatersonGooley/MantelopeGames">Github Repo</a></li>
+                <li class="animate__animated animate__tada nav-margin"><a href="#Hiring">Jobs</a></li>
+                <li class="image github-logo"><a href="https://github.com/PatersonGooley/MantelopeGames">Github Repo</a></li>
             </ul>
         </nav>
     </header>
@@ -150,7 +182,7 @@
         <section id="latest-games">
             <br>
             <h2 class="animate__animated animate__flipInX">Latest Games</h2>
-            <div class="game-container">
+<!--            <div class="game-container">
                 <div class="game animate__animated animate__fadeInDown">
                     <img src="Slime_Starlight.png" alt="Slime Starlight">
                     <h3>Slime Starlight</h3>
@@ -166,16 +198,34 @@
                     <a href="https://itch.io/jam/trijam-294">View TriJam #294</a>
                 </div>
             </div>
-            <p><a href="about.html" class="unpurpleise animate__animated animate__fadeInDown">View All Games</a></p>
+            <p><a href="about.html" class="unpurpleise animate__animated animate__fadeInDown">View All Games</a></p>  -->
+            <h3 class="animate__animated animate__fadeInDown red-text"> ERROR 404: These games are no longer available.</h3>
         </section>
         <section id="upcoming-games">
             <h2 class="animate__animated animate__flipInX">Upcoming Games</h2>
             <div class="game-container">
                 <div class="game animate__animated animate__fadeInDown">
                     <img src="chicken.png" alt="Chicken Parkour Chicken Model Screenshot">
-                    <h3>Chicken Parkour</h3>
-                    <p>Your a chicken trying to escape a flood.</p>
+                    <h3>Away from Home</h3>
+                    <p>An emotional game where you are a cat during a wild fire.</p>
                     <p class="bold">Coming Soon</p>
+                </div>
+            </div>
+        </section>
+        <section id="Hiring">
+            <h2 class="animate__animated animate__flipInX">Jobs!</h2>
+            <div class="jobs-container">
+                <div class="job animate__animated animate__fadeInDown">
+                    <h3>Game Developer</h3>
+                    <p>Looking for a game developer to help with upcoming projects.</p>
+                    <p class="bold red-text">VOLUNTARY WORK!!</p>
+                    <p class="bold">Contact me on Discord: blenslo_95054</p>
+                </div>
+                <div class="job animate__animated animate__fadeInDown">
+                    <h3>3D Modeler (Blender)</h3>
+                    <p>Looking for a 3D Modeler to help with upcoming projects.</p>
+                    <p class="bold red-text">VOLUNTARY WORK!!</p>
+                    <p class="bold">Contact me on Discord: blenslo_95054</p>
                 </div>
             </div>
         </section>
